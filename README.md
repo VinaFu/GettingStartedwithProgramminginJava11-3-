@@ -18,8 +18,29 @@
         // do sth.
         char-by-char value comparison: I = I, space = space, L = L, etc.
         
-    3) intern() - creates an exact copy of a String object in the heap memory and stores it in the String constant pool.
+    3) .intern() - creates an exact copy of a String object in the heap memory and stores it in the String constant pool.
     
-   TO BE CONTINUE 7 - 4:32 end (intern)
+    String class Methods: https://www.w3schools.com/java/java_ref_string.asp
+    Common ones: 
+                 Method	    	Description		Return Type
+                 charAt()		Returns the character at the specified index (position)		char
+                 concat()		Appends a string to the end of another string	String
+                 substring()		Returns a new string which is the substring of a specified string		String
+                equalsIgnoreCase()		Compares two strings, ignoring case considerations	Boolean
+                trim()	Removes whitespace from both ends of a string	String
+                toLowerCase()	Converts a string to lower case letters		String
+                toString()	Returns the value of a String object		String
+		
+     Converting Non-string Types to String
+            String.valueOf()
+            .toString()
+            conversation - see e.g below
+            
+           e.g:
+                int i = 2, j = 3;
+                int result = i * j;
+                String output =  result + " * ";
+                System.out.println(output); // 6 *
+                                            // String output = result, doesn't work; while converstion: i + " * " + j + "=" + result, works 
 
 8. String Formatting
