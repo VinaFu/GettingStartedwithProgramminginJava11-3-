@@ -42,5 +42,26 @@
                 String output =  result + " * ";
                 System.out.println(output); // 6 *
                                             // String output = result, doesn't work; while converstion: i + " * " + j + "=" + result, works 
+	
+     For instance, how to use charAt() & word.equals(), see the practice below:
+	
+	static char opCodeFromString(String operationName){
+		char opCode = operationName.charAt(0);
+		return opCode;
+	    } // m - multiply; s - subtract;
+
+	    double valueFromWord(String word){
+		String[] numberWords = {
+			"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+		};
+		double value = 0d;
+		for(int index = 0; index < numberWords.length; index++){
+		    if(word.equals(numberWords[index])) { // if the typing words match the numberWords array, convert it into number/value
+			value = index;
+			break;
+		    }
+		}
+		return value;
+	    }
 
 8. String Formatting
