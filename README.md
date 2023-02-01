@@ -1,32 +1,35 @@
 # GettingStartedwithProgramminginJava11-3-
 
 7. Strings 
-How to convert into String
-How to modify the String - using StringBuilder
-How to find an item - .indexOf  : returns the index(position) of 1st occurrence of a specific text in a string(space incl.)
-How to insert the string - .insert(position, item)
-			   .insert(position +4, time)		- two differnt ways, but same result.
 
-    e.g:
-    String s1 = "I love";
-    s1 += " Java"; // I love Java - can be added together as well
-    String s2 = "I";
-    s2 += " love Java"; // I love Java 
+	How to convert into String
+	How to modify the String - using StringBuilder
+	How to find an item - .indexOf  : returns the index(position) of 1st occurrence of a specific text in a string(space incl.)
+	How to insert the string - .insert(position, item)
+				   .insert(position +4, time)		- two differnt ways, but same result.
+
+
+	    e.g:
+	    String s1 = "I love";
+	    s1 += " Java"; // I love Java - can be added together as well
+	    String s2 = "I";
+	    s2 += " love Java"; // I love Java 
     
-    Equality:
+Equality:
     
-    1) if(s1 == s2) // false - same value, but different instances
-        // do sth.
-        ==: refers to same string instance; do not compare the value
-        
-    2) if(s1.equals(s2))// true
-        // do sth.
-        char-by-char value comparison: I = I, space = space, L = L, etc.
-        
-    3) .intern() - creates an exact copy of a String object in the heap memory and stores it in the String constant pool.
+	    1) if(s1 == s2) // false - same value, but different instances
+		// do sth.
+		==: refers to same string instance; do not compare the value
+
+	    2) if(s1.equals(s2))// true
+		// do sth.
+		char-by-char value comparison: I = I, space = space, L = L, etc.
+
+	    3) .intern() - creates an exact copy of a String object in the heap memory and stores it in the String constant pool.
     
-    String class Methods: https://www.w3schools.com/java/java_ref_string.asp
-    Common ones: 
+String class Methods: https://www.w3schools.com/java/java_ref_string.asp
+Common ones: 
+
                  Method	    	Description		Return Type
                  charAt()		Returns the character at the specified index (position)		char
                  concat()		Appends a string to the end of another string	String
@@ -36,7 +39,8 @@ How to insert the string - .insert(position, item)
                 toLowerCase()	Converts a string to lower case letters		String
                 toString()	Returns the value of a String object		String
 		
-     Converting Non-string Types to String
+Converting Non-string Types to String
+
             String.valueOf()
             .toString()
             conversation - see e.g below
@@ -48,7 +52,7 @@ How to insert the string - .insert(position, item)
                 System.out.println(output); // 6 *
                                             // String output = result, doesn't work; while converstion: i + " * " + j + "=" + result, works 
 	
-     For instance, how to use charAt() & word.equals(), see the practice below:
+For instance, how to use charAt() & word.equals(), see the practice below:
 	
 	static char opCodeFromString(String operationName){
 		char opCode = operationName.charAt(0);
@@ -95,7 +99,8 @@ Other classes that are useful:
 	    }
 	}
 
-	.append()
+
+.append()
 	
 	    public class Main {
 	    public static void main(String[] args) {
@@ -107,7 +112,7 @@ Other classes that are useful:
 	    }
 	}
 	
-	.insert(pos, item); manipulating wiht the index of item
+.insert(pos, item); manipulating wiht the index of item
 	
 	String time = "9:00"; // define a string
         int pos = sb.indexOf(" on");  // define the position of " on"
@@ -133,7 +138,7 @@ Other classes that are useful:
         sb.insert(pos +4, time); // I flight to Florida on 9:00Flight # 175
 	
 	
-     Convert the word-operation into symbol equation and display it: 
+Convert the word-operation into symbol equation and display it: 
 	
 	private static void displayResult(char opCode, double leftVal, double rightVal, double result) {
         char symbol = symbolFromOpCode(opCode);
