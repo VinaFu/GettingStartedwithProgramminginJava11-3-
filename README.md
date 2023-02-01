@@ -3,8 +3,11 @@
 7. Strings 
 
 	How to convert into String
+	
 	How to modify the String - using StringBuilder
+	
 	How to find an item - .indexOf  : returns the index(position) of 1st occurrence of a specific text in a string(space incl.)
+	
 	How to insert the string - .insert(position, item)
 				   .insert(position +4, time)		- two differnt ways, but same result.
 
@@ -78,8 +81,8 @@ Other classes that are useful:
 
     Scanner = get user input, and it is found in the java.util package. 
     StringBuilder = create mutable(modified) string. 
-    	.append()
-	.insert()
+		.append()
+		.insert()
     
     See example below: change [location] & [flightNumber]
     
