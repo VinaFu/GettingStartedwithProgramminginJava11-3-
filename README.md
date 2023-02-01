@@ -133,3 +133,25 @@ Other classes that are useful:
         sb.insert(pos +4, time); // I flight to Florida on 9:00Flight # 175
 	
 	
+     Convert the word-operation into symbol equation and display it: 
+	
+	private static void displayResult(char opCode, double leftVal, double rightVal, double result) {
+        char symbol = symbolFromOpCode(opCode);
+        StringBuilder builder = new StringBuilder(20);
+        builder.append(leftVal + " " + symbol + " " + rightVal + " = " + result); // concatenation the string;
+        String output = builder.toString();
+        System.out.println(output);
+    }
+
+    private static char symbolFromOpCode(char opCode){
+        char[] opCodes = {'a', 's', 'm', 'd'};
+        char[] symbols = {'+', '-', 'x', '/'};
+        char symbol = ' ';
+        for(int index = 0; index < opCodes.length; index++){
+            if (opCode == opCodes[index]){
+                symbol = symbols[index];
+                break;
+            }
+        }
+        return symbol;
+    } 
