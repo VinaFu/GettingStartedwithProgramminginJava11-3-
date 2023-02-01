@@ -1,12 +1,17 @@
 # GettingStartedwithProgramminginJava11-3-
 
 7. Strings 
+How to convert into String
+How to modify the String - using StringBuilder
+How to find an item - .indexOf  : returns the index(position) of 1st occurrence of a specific text in a string(space incl.)
+How to insert the string - .insert(position, item)
+			   .insert(position +4, time)		- two differnt ways, but same result.
 
     e.g:
     String s1 = "I love";
     s1 += " Java"; // I love Java - can be added together as well
     String s2 = "I";
-    s2 += " love Java"; // I love Java
+    s2 += " love Java"; // I love Java 
     
     Equality:
     
@@ -63,5 +68,68 @@
 		}
 		return value;
 	    }
+	
+	
+Other classes that are useful:
 
-8. String Formatting
+    Scanner = get user input, and it is found in the java.util package. 
+    StringBuilder = create mutable(modified) string. 
+    	.append()
+	.insert()
+    
+    See example below: change [location] & [flightNumber]
+    
+    e.g.
+	    public class Main {
+	    public static void main(String[] args) {
+		String location = "Florida";
+		int flightNumber = 175;
+		StringBuilder sb = new StringBuilder(40);
+		sb.append("I flew to ");
+		sb.append(location);
+		sb.append(" on Flight # ");
+		sb.append(flightNumber);
+
+	//                I flew to (Florida) on Flight # (175)
+		System.out.println(sb);
+	    }
+	}
+
+	.append()
+	
+	    public class Main {
+	    public static void main(String[] args) {
+		String location = "Florida";
+		int flightNumber = 175;
+		StringBuilder sb = new StringBuilder(40);
+		sb.append("I flight to " + location + " on Flight # " + flightNumber);
+		System.out.println(sb);
+	    }
+	}
+	
+	.insert(pos, item); manipulating wiht the index of item
+	
+	String time = "9:00"; // define a string
+        int pos = sb.indexOf(" on");  // define the position of " on"
+        sb.insert(pos, " at " + time); // insert before the position
+		//I flew to Florida at 9:00 on Flight # (175)
+	
+	String time = "9:00"; //
+        int pos = sb.indexOf(" on");  
+        sb.insert(pos, " at " );
+        sb.insert(pos +4, time); // here, the pos is the original place of " on", 
+				 // since " at " occupy 4 places, start with the four digit after pos
+        System.out.println(sb);
+	
+	 
+        sb.insert(pos, " around " );
+        sb.insert(pos +8, time); // 8-digits in " around ".
+				 // I flight to Florida around 9:00 on Flight # 175
+	
+	int pos = sb.indexOf(" on");  
+        sb.insert(pos -4, time); // I flight to Flo9:00rida on Flight # 175
+	
+	int pos = sb.indexOf(" on");  
+        sb.insert(pos +4, time); // I flight to Florida on 9:00Flight # 175
+	
+	
