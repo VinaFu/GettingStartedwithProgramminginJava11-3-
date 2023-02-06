@@ -123,22 +123,27 @@ Other classes that are useful:
 		//I flew to Florida at 9:00 on Flight # (175)
 	
 	String time = "9:00"; //
-        int pos = sb.indexOf(" on");  
-        sb.insert(pos, " at " );
+        int pos = sb.indexOf(" on");  // see ~~~
+        sb.insert(pos, " at " );     // see ----
         sb.insert(pos +4, time); // here, the pos is the original place of " on", 
 				 // since " at " occupy 4 places, start with the four digit after pos
+				 // I flew to Florida on Flight # 175
+				 		     ~~~
+				 // I flew to Florida at  on Flight # 175		  
+						     ----~~~ 	original pos +4, then add "time"
+
         System.out.println(sb);
 	
 	 
         sb.insert(pos, " around " );
         sb.insert(pos +8, time); // 8-digits in " around ".
-				 // I flight to Florida around 9:00 on Flight # 175
+				 // I flew to Florida around 9:00 on Flight # 175
 	
 	int pos = sb.indexOf(" on");  
-        sb.insert(pos -4, time); // I flight to Flo9:00rida on Flight # 175
+        sb.insert(pos -4, time); // I flew to Flo9:00rida on Flight # 175
 	
 	int pos = sb.indexOf(" on");  
-        sb.insert(pos +4, time); // I flight to Florida on 9:00Flight # 175
+        sb.insert(pos +4, time); // I flew to Florida on 9:00Flight # 175
 	
 	
 Convert the word-operation into symbol equation and display it: 
