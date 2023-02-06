@@ -115,7 +115,7 @@ Other classes that are useful:
 	    }
 	}
 	
-.insert(pos, item); manipulating wiht the index of item
+.insert(pos, item); manipulating with the index of item
 	
 	String time = "9:00"; // define a string
         int pos = sb.indexOf(" on");  // define the position of " on"
